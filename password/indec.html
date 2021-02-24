@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+<style media="screen">
+input[type="password"],input[type="text"] {
+  border:none;
+  outline:0
+  /* padding: 10px
+  */
+  /* height: 15px */
+  /* font-size: 10px */
+}
+
+.container{
+  border: 1px solid rgb(51, 197, 231);
+  width:200px;
+  display: flex  ;
+  /* justify-content: space-between; */
+  padding: 10px 0px ;
+  padding-left:10px
+
+}
+i {
+  position: relative;
+  left:10px;
+  top:1.2px;
+  counter:pointer
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 500px
+}
+
+</style>
+
+  </head>
+  <body>
+    <div class="main">
+
+
+    <form class="" action="index.html" method="post">
+      <div class="container">
+
+        <input id="password" type="password" name="" value="">
+        <i onclick="changeVis()" id="togglePass" class="fas fa-eye"></i>
+      </div>
+
+
+    </form>
+
+  </div>
+
+    <!-- <i class="fa fa-car"></i> -->
+    <!-- <i class="far fa-eye-slash"></i> -->
+
+    <script type="text/javascript">
+
+    var icon = document.getElementById("togglePass");
+    var inputPass = document.getElementById("password");
+
+    function changeVis(){
+      var type ;
+      if (inputPass.getAttribute("type") == "password"){
+        type = "text";
+        console.log(type);
+        inputPass.setAttribute("type",type);
+
+      }
+      else{
+        type = "password"
+        console.log(type);
+        inputPass.setAttribute("type",type);
+
+      }
+
+      icon.classList.toggle("fa-eye-slash")
+
+
+
+    }
+
+
+    </script>
+
+
+
+  </body>
+</html>
